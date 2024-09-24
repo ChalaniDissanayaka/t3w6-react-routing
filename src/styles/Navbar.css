@@ -1,6 +1,62 @@
-
+/* Navbar container */
 nav {
-	a.active {
-		color: palevioletred;
-	}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0f6952; /* Dark background for the navbar */
+  padding: 15px 30px; /* Padding for the navbar */
+}
+
+/* Navbar Title */
+nav h1 {
+  color: white;
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Navbar Links container (to make the links appear in a row) */
+nav .nav-links {
+  display: flex;
+  gap: 30px; /* Space between the links */
+}
+
+/* Navbar Links */
+nav a {
+  text-decoration: none;
+}
+
+/* Navbar h3 (links) */
+nav h3 {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+}
+
+/* Hover Effect on Links */
+nav h3:hover {
+  color: rgb(235, 212, 134); /* Yellow hover color */
+}
+
+/* Active Link Style */
+.active h3 {
+  color: rgb(241, 204, 82); /* Yellow color for active link */
+}
+
+/* Responsive design: stack links vertically on small screens */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav h3 {
+    margin: 10px 0;
+  }
 }
